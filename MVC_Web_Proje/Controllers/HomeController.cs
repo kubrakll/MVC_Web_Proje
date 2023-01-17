@@ -29,6 +29,7 @@ namespace MVC_Web_Proje.Controllers
 
         public ActionResult MyPage()
         {
+
             return View();
         }
     }
