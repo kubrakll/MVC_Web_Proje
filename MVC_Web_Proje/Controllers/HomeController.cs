@@ -26,5 +26,10 @@ namespace MVC_Web_Proje.Controllers
 
             return View();
         }
+
+        public ActionResult MyPage()
+        {
+            return View();
+        }
     }
 }
