@@ -141,6 +141,16 @@
     <Content Include="Content\favicon_package_v0.16\favicon.ico" />
     <Content Include="Content\favicon_package_v0.16\mstile-150x150.png" />
     <Content Include="Content\favicon_package_v0.16\safari-pinned-tab.svg" />
+    <Content Include="Content\square_profile\web\css\fontawesome-all.min.css" />
+    <Content Include="Content\square_profile\web\css\style.css" />
+    <Content Include="Content\square_profile\web\images\p1.jpeg" />
+    <Content Include="Content\square_profile\web\index.html" />
+    <Content Include="Content\square_profile\web\js\jquery.circlechart.js" />
+    <Content Include="Content\square_profile\web\js\jquery.min.v3.js" />
+    <Content Include="Content\square_profile\web\w3layouts-License.txt" />
+    <Content Include="Content\square_profile\web\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\square_profile\web\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\square_profile\web\webfonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -148,6 +158,18 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\favicon_package_v0.16\site.webmanifest" />
+    <Content Include="Content\square_profile\web\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\square_profile\web\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\square_profile\web\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\square_profile\web\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\square_profile\web\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\square_profile\web\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\square_profile\web\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\square_profile\web\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\square_profile\web\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\square_profile\web\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\square_profile\web\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\square_profile\web\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -174,6 +196,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Favicons.cshtml" />
+    <Content Include="Views\Home\MyPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
