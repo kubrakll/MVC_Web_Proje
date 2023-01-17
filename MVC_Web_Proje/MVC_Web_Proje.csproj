@@ -124,6 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="notlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,12 +132,22 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\favicon_package_v0.16\android-chrome-192x192.png" />
+    <Content Include="Content\favicon_package_v0.16\android-chrome-512x512.png" />
+    <Content Include="Content\favicon_package_v0.16\apple-touch-icon.png" />
+    <Content Include="Content\favicon_package_v0.16\browserconfig.xml" />
+    <Content Include="Content\favicon_package_v0.16\favicon-16x16.png" />
+    <Content Include="Content\favicon_package_v0.16\favicon-32x32.png" />
+    <Content Include="Content\favicon_package_v0.16\favicon.ico" />
+    <Content Include="Content\favicon_package_v0.16\mstile-150x150.png" />
+    <Content Include="Content\favicon_package_v0.16\safari-pinned-tab.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\favicon_package_v0.16\site.webmanifest" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -162,6 +173,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Favicons.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
