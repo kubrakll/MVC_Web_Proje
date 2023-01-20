@@ -135,6 +135,14 @@
     <Compile Include="Migrations\202301201047149_mig-add-class.designer.cs">
       <DependentUpon>202301201047149_mig-add-class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301201059431_mig-add-class-as.cs" />
+    <Compile Include="Migrations\202301201059431_mig-add-class-as.designer.cs">
+      <DependentUpon>202301201059431_mig-add-class-as.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301201101526_mig-add-class-as-as.cs" />
+    <Compile Include="Migrations\202301201101526_mig-add-class-as-as.designer.cs">
+      <DependentUpon>202301201101526_mig-add-class-as-as.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\classes\Context.cs" />
     <Compile Include="Models\classes\Kategoriler.cs" />
@@ -234,6 +242,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301201047149_mig-add-class.resx">
       <DependentUpon>202301201047149_mig-add-class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301201059431_mig-add-class-as.resx">
+      <DependentUpon>202301201059431_mig-add-class-as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301201101526_mig-add-class-as-as.resx">
+      <DependentUpon>202301201101526_mig-add-class-as-as.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

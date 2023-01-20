@@ -13,9 +13,11 @@ namespace MVC_Web_Proje.Models.classes
 
         public string urunAdı { get; set; }
 
-        public string urunKategori { get; set; }
+        public string urunMarka { get; set; }
 
         public string urunFiyat { get; set; }
+
+        public int stok { get; set; }
 
 
         //İlişki
