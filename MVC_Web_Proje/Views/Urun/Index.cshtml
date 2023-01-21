@@ -1,0 +1,33 @@
+﻿@using MVC_Web_Proje.Models.classes
+@model List<Urunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün ID</th>
+        <th>Ürün Adı</th>
+        <th>Markası</th>
+        <th>Kategori</th>
+        <th>Fiyat</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.urunID</th>
+            <td>@item.urunAdı</td>
+            <td>@item.urunMarka</td>
+            <td>@item.kategoriID</td>
+            <td>@item.urunFiyat</td>
+            <td>@item.stok</td>
+        </tr>
+    }
+
+
+</table>
+
+
+
