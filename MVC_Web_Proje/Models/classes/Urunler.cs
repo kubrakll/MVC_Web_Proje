@@ -21,7 +21,7 @@ namespace MVC_Web_Proje.Models.classes
 
 
         //İlişki
-        public int kategoriID { get; set; }
+        public int? kategoriID { get; set; }
         public Kategoriler Kategoriler { get; set; }
 
         public List<Satıslar> satıslars { get; set; }

@@ -15,5 +15,19 @@ namespace MVC_Web_Proje.Controllers
             var c = db.musterilers.ToList();
             return View(c);
         }
+
+        [HttpGet]
+        public ActionResult YeniMusteri()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniMusteri(Musteriler m)
+        {
+            db.musterilers.Add(m);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

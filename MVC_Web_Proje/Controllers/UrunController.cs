@@ -15,5 +15,28 @@ namespace MVC_Web_Proje.Controllers
             var c = db.urunlers.ToList();
             return View(c);
         }
+
+        [HttpGet]
+        public ActionResult YeniUrun()
+        {
+            List<SelectListItem> degerler = (from i in db.kategorilers.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = i.kategoriAdı,
+                                                 Value = i.kategoriID.ToString()
+                                             }).ToList();
+            ViewBag.dgr = degerler;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniUrun(Urunler u)
+        {
+            var ktg = db.kategorilers.Where(m => m.kategoriID == u.kategoriID).FirstOrDefault();
+            u.Kategoriler = ktg;
+            db.urunlers.Add(u);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

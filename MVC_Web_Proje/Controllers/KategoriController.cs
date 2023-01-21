@@ -27,7 +27,7 @@ namespace MVC_Web_Proje.Controllers
         {
             db.kategorilers.Add(k);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
         
     }
