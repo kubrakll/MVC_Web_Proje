@@ -38,5 +38,15 @@ namespace MVC_Web_Proje.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Sil(int id)
+        {
+            var urn = db.urunlers.Find(id);
+            db.urunlers.Remove(urn);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

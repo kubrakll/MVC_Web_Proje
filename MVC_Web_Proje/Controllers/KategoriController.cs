@@ -29,6 +29,14 @@ namespace MVC_Web_Proje.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Sil(int id)
+        {
+            var ktg = db.kategorilers.Find(id);
+            db.kategorilers.Remove(ktg);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         
     }
 }

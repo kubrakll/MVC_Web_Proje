@@ -29,5 +29,13 @@ namespace MVC_Web_Proje.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Sil(int id)
+        {
+            var mst = db.musterilers.Find(id);
+            db.musterilers.Remove(mst);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
