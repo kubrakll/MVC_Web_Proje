@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList.Mvc;
+using PagedList;
 
 namespace MVC_Web_Proje.Controllers
 {
     public class KategoriController : Controller
     {
         Context db = new Context();
-        public ActionResult Index()
+        public ActionResult Index(int sayfa=1)
         {
-            var c = db.kategorilers.ToList();
+            // var c = db.kategorilers.ToList();
+            var c = db.kategorilers.ToList().ToPagedList(sayfa, 5);
             return View(c);
         }
 

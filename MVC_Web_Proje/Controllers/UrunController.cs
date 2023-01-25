@@ -47,6 +47,32 @@ namespace MVC_Web_Proje.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult UrunGetir(int id)
+        {
+            var urun = db.urunlers.Find(id);
+            List<SelectListItem> degerler = (from i in db.kategorilers.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = i.kategoriAdı,
+                                                 Value = i.kategoriID.ToString()
+                                             }).ToList();
+            ViewBag.dgr = degerler;
+            return View("UrunGetir", urun);
+        }
+
+        public ActionResult Güncelle(Urunler r)
+        {
+            var ur = db.urunlers.Find(r.urunID);
+            ur.urunAdı = r.urunAdı;
+            ur.urunMarka = r.urunMarka;
+            ur.urunFiyat = r.urunFiyat;
+            var ktg = db.kategorilers.Where(m => m.kategoriID == r.kategoriID).FirstOrDefault();
+            ur.kategoriID = ktg.kategoriID;
+            ur.stok = r.stok;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
 
     }
 }
