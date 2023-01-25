@@ -37,5 +37,21 @@ namespace MVC_Web_Proje.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult MusteriGetir(int id)
+        {
+            var mus = db.musterilers.Find(id);
+            return View("MusteriGetir", mus);
+        }
+        [HttpPost]
+        public ActionResult Güncelle(Musteriler m)
+        {
+            var mus = db.musterilers.Find(m.musteriID);
+            mus.musteriAdı = m.musteriAdı;
+            mus.musteriSoyadı = m.musteriSoyadı;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

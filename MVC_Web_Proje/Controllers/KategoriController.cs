@@ -37,6 +37,25 @@ namespace MVC_Web_Proje.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        
+
+        [HttpGet]
+        public ActionResult KategoriGetir(int id)
+        {
+            var ktg = db.kategorilers.Find(id);
+            return View("KategoriGetir",ktg);
+
+        }
+
+        [HttpPost]
+        public ActionResult Güncelle(Kategoriler p1)
+        {
+            var ktgr = db.kategorilers.Find(p1.kategoriID);
+            ktgr.kategoriID = p1.kategoriID;
+            ktgr.kategoriAdı = p1.kategoriAdı;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

@@ -1,0 +1,18 @@
+﻿@model MVC_Web_Proje.Models.classes.Kategoriler
+
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using(Html.BeginForm("Güncelle","Kategori", FormMethod.Post))
+{
+<div class="form-group">
+    
+    @Html.TextBoxFor(x => x.kategoriID, new { @class = "form-control", @readonly = true , style = "display:none" })
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.kategoriAdı, new { @class = "form-control" })
+</div>
+    <button class="btn btn-danger">Güncelle</button>
+}
+
