@@ -12,17 +12,19 @@
         <th>Müşteri Soyadı</th>
         <th>Sil</th>
         <th>Güncelle</th>
+        <th>ALERT</th>
 
     </tr>
     @foreach (var item in Model)
     {
-<tr>
-    <th>@item.musteriID</th>
-    <td>@item.musteriAdı</td>
-    <td>@item.musteriSoyadı</td>
-    <td><a href="~/Musteri/Sil/@item.musteriID" class="btn btn-danger">Sil</a></td>
-    <td><a href="~/Musteri/MusteriGetir/@item.musteriID" class="btn btn-info">Güncele</a></td>
-</tr>
+        <tr>
+            <th>@item.musteriID</th>
+            <td>@item.musteriAdı</td>
+            <td>@item.musteriSoyadı</td>
+            <td><a href="~/Musteri/Sil/@item.musteriID" class="btn btn-danger">Sil</a></td>
+            <td><a href="~/Musteri/MusteriGetir/@item.musteriID" class="btn btn-info">Güncele</a></td>
+            <td>@Html.ActionLink("Sil Butonu", "Sil", new { id=item.musteriID }, new { @class = "btn btn-warning", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz ?')" })</td>
+        </tr>
     }
 
 
