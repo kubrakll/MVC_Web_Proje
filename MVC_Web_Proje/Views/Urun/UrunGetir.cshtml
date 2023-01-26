@@ -1,0 +1,30 @@
+﻿@model MVC_Web_Proje.Models.classes.Urunler
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Güncelle", "Urun", FormMethod.Post))
+{
+<div class="form-group">
+
+    @Html.TextBoxFor(x => x.urunID, new { @class = "form-control", @readonly = true, style = "display:none" })
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.urunAdı, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Fiyat")
+    @Html.TextBoxFor(x => x.urunFiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x=>x.kategoriID,(List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.Kategoriler.kategoriAdı, new { @class = "form-control" })*@
+    <br />
+    @Html.Label("Ürünün Markası")
+    @Html.TextBoxFor(x => x.urunMarka, new { @class = "form-control" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.stok, new { @class = "form-control" })
+</div>
+    <button class="btn btn-danger">Güncelle</button>
+}
+

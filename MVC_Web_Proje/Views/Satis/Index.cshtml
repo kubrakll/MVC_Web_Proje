@@ -1,0 +1,37 @@
+﻿@model MVC_Web_Proje.Models.classes.Satıslar
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#Modal1">
+    Satış Yap
+</button>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Satış Yapma Ekranı</h2>
+            </div>
+            <form method="post" action="~/Satis/YeniSatis">
+                <div class="modal-body">
+                    <label>Ürün Adı</label>
+                    @Html.TextBoxFor(x => x.urunID, new { @class = "form-control" })
+                    <br />
+                    <label>Müşteri Adı Soyadı</label>
+
+                    @*@Html.DropDownListFor(x => x.musteriID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })*@
+                    <br />
+                    <label>Adet</label>
+                    @Html.TextBoxFor(x => x.adet, new { @class = "form-control" })
+                    <br />
+                    <label>Fiyat</label>
+                    @Html.TextBoxFor(x => x.fiyat, new { @class = "form-control" })
+                    <br />
+                    <button type="submit" class="btn btn-info">Satış İşlemini Yap</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">İptal Et</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
