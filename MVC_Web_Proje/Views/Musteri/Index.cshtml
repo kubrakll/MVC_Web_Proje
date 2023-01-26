@@ -5,6 +5,13 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+
+@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p>
+        <b>Aranacak Müşteri Adı: </b> @Html.TextBox("p")  <input type="submit" value="Ara" class="btn btn-danger"/></p>
+    
+}
 <table class="table table-bordered">
     <tr>
         <th>Müşteri ID</th>
@@ -23,9 +30,9 @@
             <td>@item.musteriSoyadı</td>
             <td><a href="~/Musteri/Sil/@item.musteriID" class="btn btn-danger">Sil</a></td>
             <td><a href="~/Musteri/MusteriGetir/@item.musteriID" class="btn btn-info">Güncele</a></td>
-            <td>@Html.ActionLink("Sil Butonu", "Sil", new { id=item.musteriID }, new { @class = "btn btn-warning", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz ?')" })</td>
+            <td>@Html.ActionLink("Sil Butonu", "Sil", new { id = item.musteriID }, new { @class = "btn btn-warning", onclick = "return confirm('Gerçekten Silmek İstiyor musunuz ?')" })</td>
         </tr>
-    }
+        }
 
 
 </table>

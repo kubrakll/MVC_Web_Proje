@@ -10,10 +10,17 @@ namespace MVC_Web_Proje.Controllers
     public class MusteriController : Controller
     {
         Context db = new Context();
-        public ActionResult Index()
+
+        public ActionResult Index(string p)
         {
-            var c = db.musterilers.ToList();
-            return View(c);
+            var degerler = from d in db.musterilers select d;
+            if (!string.IsNullOrEmpty(p))
+            {
+                degerler = degerler.Where(x => x.musteriAdı.Contains(p));
+            }
+            return View(degerler.ToList());
+            //var c = db.musterilers.ToList();
+            //return View(c);
         }
 
         [HttpGet]
