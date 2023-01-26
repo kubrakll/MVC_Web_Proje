@@ -1,4 +1,4 @@
-﻿
+﻿@model MVC_Web_Proje.Models.classes.Satıslar
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -13,21 +13,23 @@
             <div class="modal-header">
                 <h2 class="modal-title">Satış Yapma Ekranı</h2>
             </div>
-            <form >
+            <form method="post" action="~/Satis/YeniSatis">
                 <div class="modal-body">
                     <label>Ürün Adı</label>
-                    <input type="text" name="urun" class="form-control" />
-                    <br />
-                    <label>Ürün Markası</label>
-                    <input type="text" name="marka" class="form-control" />
+                    @Html.TextBoxFor(x => x.urunID, new { @class = "form-control" })
                     <br />
                     <label>Müşteri Adı Soyadı</label>
-                    <input type="text" name="musteri" class="form-control" />
+
+                    @*@Html.DropDownListFor(x => x.musteriID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })*@
                     <br />
-                    <label>Müşteri Telefon</label>
-                    <input type="text" name="telefon" class="form-control" />
+                    <label>Adet</label>
+                    @Html.TextBoxFor(x => x.adet, new { @class = "form-control" })
                     <br />
-                    <button class="btn btn-danger">Verileri Kaydet</button>
+                    <label>Fiyat</label>
+                    @Html.TextBoxFor(x => x.fiyat, new { @class = "form-control" })
+                    <br />
+                    <button type="submit" class="btn btn-info">Satış İşlemini Yap</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">İptal Et</button>
                 </div>
             </form>
         </div>
