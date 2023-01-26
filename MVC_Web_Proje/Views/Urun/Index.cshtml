@@ -5,33 +5,47 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<table class="table table-bordered">
-    <tr>
-        <th>Ürün ID</th>
-        <th>Ürün Adı</th>
-        <th>Markası</th>
-        <th>Kategori</th>
-        <th>Fiyat</th>
-        <th>Stok</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-    </tr>
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ürün ID</th>
+            <th>Ürün Adı</th>
+            <th>Markası</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+
+    </thead>
     @foreach (var item in Model)
     {
-<tr>
-    <th>@item.urunID</th>
-    <td>@item.urunAdı</td>
-    <td>@item.urunMarka</td>
-    <td>@item.kategoriID</td>
-    <td>@item.urunFiyat</td>
-    <td>@item.stok</td>
-    <td><a href="~/Urun/Sil/@item.urunID" class="btn btn-danger">Sil</a></td>
-    <td><a href="~/Urun/UrunGetir/@item.urunID" class="btn btn-info">Güncele</a></td>
-</tr>
+        <tr>
+            <th>@item.urunID</th>
+            <td>@item.urunAdı</td>
+            <td>@item.urunMarka</td>
+            <td>@item.kategoriID</td>
+            <td>@item.urunFiyat</td>
+            <td>@item.stok</td>
+            <td><a href="~/Urun/Sil/@item.urunID" class="btn btn-danger">Sil</a></td>
+            <td><a href="~/Urun/UrunGetir/@item.urunID" class="btn btn-info">Güncele</a></td>
+        </tr>
     }
 
 
 </table>
 <a href="~/Urun/YeniUrun" class="btn btn-success">Yeni Ürün Ekle</a>
 
+<link href="~/Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
+<script>
+    $('#tbl1').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Turkish.json"
+        }
+    });
+
+
+</script>
